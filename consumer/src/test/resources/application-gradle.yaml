@@ -1,0 +1,3 @@
+stubrunner:
+  work-offline: true
+  stubs.ids: 'com.hcsc.experience.de-member.producer:+:producer-unspecified-stubs:6565'

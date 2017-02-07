@@ -1,0 +1,17 @@
+apply plugin: 'spring-cloud-contract'
+apply plugin: 'maven-publish'
+
+apply from: 'contract.gradle'
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    testCompile group: 'org.springframework.cloud', name: 'spring-cloud-starter-contract-verifier'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+}
+
+test {
+    systemProperty 'spring.profiles.active', 'gradle'
+    testLogging {
+        exceptionFormat = 'full'
+    }
+}
