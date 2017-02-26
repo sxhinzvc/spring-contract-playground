@@ -2,6 +2,7 @@ apply plugin: 'spring-cloud-contract'
 apply plugin: 'maven-publish'
 
 apply from: 'contract.gradle'
+apply from: 'restdocs.gradle'
 
 dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
